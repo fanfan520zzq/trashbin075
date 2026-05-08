@@ -17,18 +17,29 @@
         </ul>
     </nav>
 
-    <main class="content-section profile-section">
+    <main class="content-section profile-section animate-up">
         <h1 data-i18n="about_title">关于开发者</h1>
         <div class="profile-card">
-            <div class="avatar">
+            <div class="avatar" style="transition: transform 0.4s ease;">
                 <span data-i18n="about_avatar">头像</span>
             </div>
             <div class="profile-info">
-                <h2 data-i18n="about_name">开发者：杨易帆 </h2>
-                <p data-i18n="about_id">学号：24019100166</p>
-                <p data-i18n="about_role">项目中负责：网站开发、文书工作、专利撰写</p>
-                <p data-i18n="about_email">邮箱：24019100166@stu.xidian.edu.cn</p>
+                <h2 data-i18n="about_name">开发者：杨易帆</h2>
+                <p data-i18n="about_id" style="color: #666; font-weight: 500;">学号：24019100166</p>
+                <div class="divider" style="height: 2px; width: 50px; background: var(--primary-color); margin: 15px 0;"></div>
+                <p data-i18n="about_role">项目中负责：网站开发、文书工作、专利撰写。统筹了整体项目的宣传与文档沉淀，将复杂的硬件系统通过易懂的 Web 界面呈现给大众。</p>
+                <p data-i18n="about_email" style="margin-top: 10px; font-family: monospace; background: #e8f5e9; display: inline-block; padding: 5px 10px; border-radius: 4px;">✉️ 邮箱：24019100166@stu.xidian.edu.cn</p>
             </div>
+        </div>
+
+        <div class="card-outline animate-up delay-2" style="margin-top: 3rem;">
+            <h2 data-i18n="about_future_title" style="color: var(--primary-color);">展望与未来发展</h2>
+            <p data-i18n="about_future_p1" style="font-size: 1.05rem; line-height: 1.8;">智能垃圾桶只是我们迈向智慧城市以及物联网(IoT)边缘计算终端的一小步。在下一代版本的规划中，我们计划引入：</p>
+            <ul style="margin-top: 1rem;">
+                <li data-i18n="about_future_1">更强劲的 NPU 硬件加速器，支持本地运行微型深度学习模型，实现百余种垃圾精准分类。</li>
+                <li data-i18n="about_future_2">太阳能顶盖供电系统，追求极致低功耗，自给自足。</li>
+                <li data-i18n="about_future_3">结合大语言模型(LLM)的智能交互屏，能与投入垃圾的居民进行分类科普对话。</li>
+            </ul>
         </div>
     </main>
 
