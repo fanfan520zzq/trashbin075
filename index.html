@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能垃圾桶项目 - 版本导航</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: #e9ecef;
+            color: #333;
+        }
+        h1 {
+            margin-bottom: 3rem;
+            color: #2c3e50;
+        }
+        .container {
+            display: flex;
+            gap: 3rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .card {
+            text-decoration: none;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            width: 280px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            display: block;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        .card h2 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+        .card p {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            margin: 0;
+        }
+        
+        /* 经典风格卡片 */
+        .theme-light {
+            background: #ffffff;
+            color: #333;
+            border-top: 6px solid #4CAF50;
+        }
+        .theme-light h2 {
+            color: #2E7D32;
+        }
+
+        /* 极客风格卡片 */
+        .theme-dark {
+            background: #161b22;
+            color: #c9d1d9;
+            border-top: 6px solid #58a6ff;
+        }
+        .theme-dark h2 {
+            color: #58a6ff;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>智能垃圾桶项目网页展示</h1>
+
+    <div class="container">
+        <!-- 链接到第一版：经典环保风格 -->
+        <a href="website/index.html" class="theme-light card">
+            <h2>🌍 经典环保风 (Light)</h2>
+            <p>明亮清新的环保主题设计，包含多媒体图文演示与开发者详细信息。</p>
+        </a>
+
+        <!-- 链接到第二版：暗黑科技风格 -->
+        <a href="website_v2/index.html" class="theme-dark card">
+            <h2>💻 赛博科技风 (Dark)</h2>
+            <p>暗黑毛玻璃极客主题，纯净的技术白皮书风格，无冗余多媒体。</p>
+        </a>
+    </div>
+
+</body>
+</html>

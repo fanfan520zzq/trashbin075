@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我 / About Me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo" data-i18n="logo">智能垃圾桶项目</div>
+        <ul class="nav-links">
+            <li><a href="index.html" data-i18n="nav_home">首页</a></li>
+            <li><a href="project.html" data-i18n="nav_project">项目详情</a></li>
+            <li><a href="about.html" class="active" data-i18n="nav_about">关于我</a></li>
+            <li><button id="lang-toggle" onclick="toggleLanguage()">English</button></li>
+        </ul>
+    </nav>
+
+    <main class="content-section profile-section">
+        <h1 data-i18n="about_title">关于开发者</h1>
+        <div class="profile-card">
+            <div class="avatar">
+                <span data-i18n="about_avatar">头像</span>
+            </div>
+            <div class="profile-info">
+                <h2 data-i18n="about_name">开发者：杨易帆 </h2>
+                <p data-i18n="about_id">学号：24019100166</p>
+                <p data-i18n="about_role">项目中负责：网站开发、文书工作、专利撰写</p>
+                <p data-i18n="about_email">邮箱：24019100166@stu.xidian.edu.cn</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p data-i18n="footer_text">&copy; 2026 智能垃圾桶项目组. 保留所有权利.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

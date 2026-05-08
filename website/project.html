@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目详情 / Project Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo" data-i18n="logo">智能垃圾桶项目</div>
+        <ul class="nav-links">
+            <li><a href="index.html" data-i18n="nav_home">首页</a></li>
+            <li><a href="project.html" class="active" data-i18n="nav_project">项目详情</a></li>
+            <li><a href="about.html" data-i18n="nav_about">关于我</a></li>
+            <li><button id="lang-toggle" onclick="toggleLanguage()">English</button></li>
+        </ul>
+    </nav>
+
+    <main class="content-section">
+        <h1 data-i18n="proj_title">智能垃圾桶技术详解</h1>
+        
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <img src="trashbin.png" alt="智能垃圾桶外观图" style="max-width: 100%; max-height: 400px; border-radius: 10px; margin-bottom: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+            <br>
+            <video src="video.mp4" controls style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                您的浏览器不支持视频播放。
+            </video>
+        </div>
+
+        <h2 data-i18n="proj_arch">系统架构</h2>
+        <p data-i18n="proj_arch_desc">本项目主要由 STM32 微控制器（MCU）与底层 FPGA 构成协同处理架构组合控制。FPGA 负责高速数据采集与图像初步处理，MCU 负责系统逻辑控制、云端通信与电机驱动。</p>
+        
+        <div style="text-align: center; margin: 2rem 0;">
+            <img src="structure.jpg" alt="系统结构框图" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+        </div>
+
+        <h2 data-i18n="proj_work">工作原理</h2>
+        <ul>
+            <li data-i18n="proj_work_1">1. 超声波与红外传感器检测到人体靠近，MCU 控制舵机打开垃圾桶盖。</li>
+            <li data-i18n="proj_work_2">2. 投入垃圾后，摄像头采集图像并传递给 FPGA 进行边缘检测与预处理。</li>
+            <li data-i18n="proj_work_3">3. 识别结果由主控判断，驱动内部挡板将垃圾分入对应类别的桶中。</li>
+        </ul>
+    </main>
+
+    <footer>
+        <p data-i18n="footer_text">&copy; 2026 智能垃圾桶项目组. 保留所有权利.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

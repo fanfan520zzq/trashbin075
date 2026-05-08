@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能垃圾桶 - 首页 / Smart Trash Can - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo" data-i18n="logo">智能垃圾桶项目</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active" data-i18n="nav_home">首页</a></li>
+            <li><a href="project.html" data-i18n="nav_project">项目详情</a></li>
+            <li><a href="about.html" data-i18n="nav_about">关于我</a></li>
+            <li><button id="lang-toggle" onclick="toggleLanguage()">English</button></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1 data-i18n="hero_title">开启智慧环保新生活</h1>
+        <p data-i18n="hero_desc">基于 MCU 与 FPGA 的智能垃圾桶设计，让分类更简单，让环境更美好。</p>
+        <a href="project.html" class="cta-btn" data-i18n="hero_btn">了解更多</a>
+    </header>
+
+    <section class="features">
+        <div class="feature-card">
+            <h3 data-i18n="feature1_title">智能感应</h3>
+            <p data-i18n="feature1_desc">人体红外感应，自动开盖，无接触更卫生。</p>
+        </div>
+        <div class="feature-card">
+            <h3 data-i18n="feature2_title">自动分类</h3>
+            <p data-i18n="feature2_desc">图像识别与传感器结合，实现垃圾精准分类。</p>
+        </div>
+        <div class="feature-card">
+            <h3 data-i18n="feature3_title">满载报警</h3>
+            <p data-i18n="feature3_desc">监测垃圾桶容量，满载自动提醒清理。</p>
+        </div>
+    </section>
+
+    <footer>
+        <p data-i18n="footer_text">&copy; 2026 智能垃圾桶项目组. 保留所有权利.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

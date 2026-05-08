@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能垃圾桶 - 技术白皮书</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="glass-nav">
+        <div class="brand" data-i18n="brand">SmartBin System</div>
+        <nav>
+            <a href="index.html" data-i18n="nav_home">首页</a>
+            <a href="project.html" class="active" data-i18n="nav_project">技术白皮书</a>
+            <a href="about.html" data-i18n="nav_about">团队介绍</a>
+            <button id="lang-btn" onclick="toggleLang()">EN</button>
+        </nav>
+    </header>
+
+    <main class="content-wrapper">
+        <div class="text-block">
+            <h1 data-i18n="proj_arch_title">系统架构解析</h1>
+            <p data-i18n="proj_arch_content">项目采用异构计算平台。主要控制器MCU负责低层外设（红外、超声波、电机舵机）的调度和状态机循环；同时，视觉数据由高速率摄像头采集后，直接送入FPGA阵列进行图像预处理及特征提取。两者通过SPI/UART总线进行高速通信。</p>
+        </div>
+
+        <div class="text-block">
+            <h1 data-i18n="proj_flow_title">核心工作流</h1>
+            <ul class="timeline">
+                <li data-i18n="flow_1">1. 行人靠近触发超声波预警，MCU激活舵机开盖，系统从休眠状态唤醒。</li>
+                <li data-i18n="flow_2">2. 垃圾入桶期间，FPGA控制模组完成高帧率图像捕获，实时分析垃圾轮廓特征。</li>
+                <li data-i18n="flow_3">3. MCU结合多传感器数据与视觉识别结果综合判断，指令机械挡板执行分类动作。</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p data-i18n="footer">© 2026 SmartBin Project Team.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
