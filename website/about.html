@@ -13,7 +13,13 @@
             <li><a href="index.html" data-i18n="nav_home">首页</a></li>
             <li><a href="project.html" data-i18n="nav_project">项目详情</a></li>
             <li><a href="about.html" class="active" data-i18n="nav_about">关于我</a></li>
-            <li><button id="lang-toggle" onclick="toggleLanguage()">English</button></li>
+            <li>
+                <select class="user-toggle-select" onchange="toggleUserSelection(event)">
+                    <option value="user1">User 1 (标准绿)</option>
+                    <option value="user2">User 2 (赛博朋克)</option>
+                </select>
+                <button id="lang-toggle" onclick="toggleLanguage()">English</button>
+            </li>
         </ul>
     </nav>
 
