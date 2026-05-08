@@ -95,29 +95,9 @@ function toggleLanguage() {
 window.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('preferredLang') || 'zh';
     setLanguage(savedLang);
-    initThemeSwitcher();
-});
-
-function initThemeSwitcher() {
-    const container = document.createElement('div');
-    container.innerHTML = `
-    <div style="position: fixed; top: 100px; right: 20px; z-index: 9999; display: flex; flex-direction: column; align-items: flex-end;">
-        <button id="ts-toggle" style="background: #2e7d32; color: white; border: none; border-radius: 50%; width: 45px; height: 45px; cursor: pointer; font-size: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: 0.3s;" title="切换版本">🎨</button>
-        <div id="ts-menu" style="display: none; background: white; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.15); margin-top: 10px; padding: 10px; flex-direction: column; gap: 8px;">
-            <p style="margin: 0; padding: 0 5px 8px; font-size: 0.85rem; color: #666; border-bottom: 1px solid #eee;">切换为其他风格</p>
-            <button onclick="switchTheme()" style="background: #161b22; color: #58a6ff; border: none; padding: 10px 15px; border-radius: 6px; cursor: pointer; width: 100%; text-align: left; font-weight: bold; font-size: 0.9rem;">💻 赛博科技风 (Beta)</button>
-        </div>
-    </div>`;
-    document.body.appendChild(container);
-    
-    document.getElementById('ts-toggle').addEventListener('click', () => {
-        const menu = document.getElementById('ts-menu');
-        menu.style.display = menu.style.display === 'none' ? 'flex' : 'none';
-        document.getElementById('ts-toggle').style.transform = menu.style.display === 'flex' ? 'rotate(90deg)' : 'rotate(0deg)';
+    // 触发页面进入时的动画效果
+    const animatedElements = document.querySelectorAll('.animate-up');
+    animatedElements.forEach((el, index) => {
+        el.style.animationDelay = `${index * 0.2}s`;
     });
-}
-
-function switchTheme() {
-    let currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    window.location.href = '../website_v2/' + currentPage;
-}
+});
