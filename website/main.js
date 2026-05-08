@@ -56,29 +56,44 @@ const translations = {
         hero_desc: "Smart trash can design based on MCU & FPGA. Making sorting easier and environment better.",
         hero_btn: "Learn More",
         feature1_title: "Smart Sensing",
-        feature1_desc: "Infrared sensing, auto-opening, contact-free and hygienic.",
+        feature1_desc: "Infrared sensing, auto-opening, contact-free and hygienic. Equipped with ultrasonic radar for instant response.",
         feature2_title: "Auto Sorting",
-        feature2_desc: "Combined image recognition and sensors for precise garbage sorting.",
+        feature2_desc: "Combined image recognition and sensors for precise garbage sorting. FPGA edge computing acceleration for millisecond-level recognition.",
         feature3_title: "Full Alert",
-        feature3_desc: "Monitors capacity and automatically alerts when full.",
+        feature3_desc: "Monitors capacity and automatically alerts when full. Supports cloud connectivity for easier management by environmental sanitation personnel.",
         footer_text: "© 2026 Smart Trash Can Project Team. All rights reserved.",
 
+        bg_title: "Project Background & Environmental Significance",
+        bg_p1: "With the acceleration of urbanization, domestic waste production has surged. Traditional waste disposal methods are not only inefficient but also prone to secondary pollution. Waste sorting is an essential way to achieve resource recycling and protect the eco-environment. However, in practice, residents often face the dilemma of 'not knowing how to sort' and 'finding it troublesome'.",
+        bg_p2: "This project aims to create a 'Smart Trash Can' with automatic recognition and sorting without manual intervention, utilizing cutting-edge MCU and FPGA technologies. It significantly lowers the sorting barrier, improves the recycling rate, and responds to the national call for ecological civilization. Using tech to empower environmental protection, making every sorting an act of care for the earth.",
+
         proj_title: "Smart Trash Can Technology",
-        proj_video_placeholder: "[Video Placeholder - Demo of auto-opening and sorting]",
         proj_arch: "System Architecture",
-        proj_arch_desc: "This project uses a collaborative processing architecture of an STM32 Microcontroller (MCU) and an FPGA. The FPGA handles high-speed data acquisition and initial image processing, while the MCU manages system logic, cloud communication, and motor drives.",
-        proj_img_placeholder: "[Architecture Diagram Placeholder]",
+        proj_arch_desc: "This project uses a collaborative processing architecture of an STM32 Microcontroller (MCU) and an FPGA. The FPGA handles high-speed data acquisition and initial image processing, while the MCU manages system logic, cloud communication, and motor drives. They achieve high-speed seamless data exchange via SPI / UART interfaces, giving the system both strong peripheral driving capability and excellent edge computing power.",
         proj_work: "Working Principle",
         proj_work_1: "1. Ultrasonic and infrared sensors detect human approach; MCU controls servo to open the lid.",
-        proj_work_2: "2. After disposing trash, the camera captures an image and sends it to the FPGA for edge detection.",
+        proj_work_2: "2. After disposing trash, the camera captures an image and sends it to the FPGA for edge detection and preprocessing.",
         proj_work_3: "3. The main controller evaluates the results and drives internal baffles to sort trash into the correct bin.",
+        proj_work_4: "4. Temp, humidity, and weight sensors operate in real-time, issuing audio and light alarms when full, and reporting to the cloud DB.",
+
+        proj_hardware_title: "Hardware Specifications",
+        proj_hardware_p1: "Our hardware selection strictly balances power, performance, and cost. Core modules include:",
+        proj_hardware_1: "Microcontroller Core: STM32F411CEU6, based on ARM Cortex-M4, with a custom FreeRTOS ensuring extremely low latency in sensor polling and response.",
+        proj_hardware_2: "Vision Co-processor: Low-power FPGA utilizing hardware parallel processing for image algorithms, relieving MCU calculation pressure.",
+        proj_hardware_3: "Execution & Sensor Matrix: SG90 high-torque servo, HC-SR04 ultrasonic, OV7670 HD camera, HX711 pressure weighing module.",
 
         about_title: "About the Developer",
         about_avatar: "Avatar",
-        about_name: "Developer: Yifan Yang (Virtual)",
+        about_name: "Developer: Yifan Yang",
         about_id: "Student ID: 24019100166",
-        about_role: "Role: FPGA logic design, MCU control program development, and full-stack integration.",
-        about_email: "Email: developer@virtual-email.com (Virtual)"
+        about_role: "Role: Website development, documentation, and patent drafting. Coordinated overall project publicity and documentation, presenting a complex hardware system to the public via an easy-to-understand Web interface.",
+        about_email: "✉️ Email: 24019100166@stu.xidian.edu.cn",
+
+        about_future_title: "Vision & Future Development",
+        about_future_p1: "The smart trash can is just a small step towards smart cities and IoT edge computing terminals. In our next generation roadmap, we plan to introduce:",
+        about_future_1: "A stronger NPU hardware accelerator, supporting local micro deep-learning models for over a hundred precise trash classifications.",
+        about_future_2: "Solar-powered roof system, pursuing extreme low power consumption for self-sufficiency.",
+        about_future_3: "A smart interactive screen integrated with Large Language Models (LLM) to conduct science-popularization conversations with residents."
     }
 };
 
