@@ -77,4 +77,29 @@ function toggleLang() {
 
 window.addEventListener('DOMContentLoaded', () => {
     updateUI();
+    initThemeSwitcher();
 });
+
+function initThemeSwitcher() {
+    const container = document.createElement('div');
+    container.innerHTML = `
+    <div style="position: fixed; top: 100px; right: 20px; z-index: 9999; display: flex; flex-direction: column; align-items: flex-end;">
+        <button id="ts-toggle" style="background: #58a6ff; color: white; border: none; border-radius: 50%; width: 45px; height: 45px; cursor: pointer; font-size: 20px; box-shadow: 0 0 15px rgba(88, 166, 255, 0.4); transition: 0.3s;" title="切换版本">🎨</button>
+        <div id="ts-menu" style="display: none; background: #161b22; border: 1px solid #30363d; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); margin-top: 10px; padding: 10px; flex-direction: column; gap: 8px;">
+            <p style="margin: 0; padding: 0 5px 8px; font-size: 0.85rem; color: #8b949e; border-bottom: 1px solid #30363d;">切换为其他风格</p>
+            <button onclick="switchTheme()" style="background: #e8f5e9; color: #2e7d32; border: none; padding: 10px 15px; border-radius: 6px; cursor: pointer; width: 100%; text-align: left; font-weight: bold; font-size: 0.9rem;">🌿 经典环保风 (Default)</button>
+        </div>
+    </div>`;
+    document.body.appendChild(container);
+    
+    document.getElementById('ts-toggle').addEventListener('click', () => {
+        const menu = document.getElementById('ts-menu');
+        menu.style.display = menu.style.display === 'none' ? 'flex' : 'none';
+        document.getElementById('ts-toggle').style.transform = menu.style.display === 'flex' ? 'rotate(90deg)' : 'rotate(0deg)';
+    });
+}
+
+function switchTheme() {
+    let currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    window.location.href = '../website/' + currentPage;
+}
