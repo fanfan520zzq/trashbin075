@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page_title">智能垃圾桶 - 首页</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo" data-i18n="logo">智能垃圾桶项目</div>
+        <ul class="nav-links">
+            <li><a href="yyf_index.html" class="active" data-i18n="nav_home">首页</a></li>
+            <li><a href="yyf_project.html" data-i18n="nav_project">项目详情</a></li>
+            <li><a href="yyf_about.html" data-i18n="nav_about">关于我</a></li>
+            <li><button id="lang-toggle" onclick="toggleLanguage()">English</button></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content animate-up">
+            <h1 data-i18n="hero_title">开启智慧环保新生活</h1>
+            <p data-i18n="hero_desc">基于 MCU 与 FPGA 的智能垃圾桶设计，让分类更简单，让环境更美好。</p>
+            <a href="yyf_project.html" class="cta-btn" data-i18n="hero_btn">了解更多</a>
+        </div>
+    </header>
+
+    <section class="features">
+        <div class="feature-card animate-up delay-1">
+            <div class="feature-icon">✨</div>
+            <h3 data-i18n="feature1_title">智能感应</h3>
+            <p data-i18n="feature1_desc">人体红外感应，自动开盖，无接触更卫生。搭载超声波雷达，靠近即刻响应。</p>
+        </div>
+        <div class="feature-card animate-up delay-2">
+            <div class="feature-icon">🔍</div>
+            <h3 data-i18n="feature2_title">自动分类</h3>
+            <p data-i18n="feature2_desc">图像识别与传感器结合，实现垃圾精准分类。FPGA 硬件边缘计算加速，秒级识别。</p>
+        </div>
+        <div class="feature-card animate-up delay-3">
+            <div class="feature-icon">🔔</div>
+            <h3 data-i18n="feature3_title">满载报警</h3>
+            <p data-i18n="feature3_desc">监测垃圾桶容量，满载自动提醒清理。支持接云端，让物业调度和环卫人员更省心。</p>
+        </div>
+    </section>
+
+    <section class="content-section bg-section animate-up" style="margin: 0; padding: 4rem 10%;">
+        <h2 data-i18n="bg_title" style="text-align: center; color: var(--primary-color);">项目背景与环保意义</h2>
+        <p data-i18n="bg_p1" style="margin-top: 2rem; font-size: 1.1rem; line-height: 1.8;">随着城市化进程的加快，生活垃圾产量激增，传统的垃圾处理方式不仅效率低下，且容易造成二次污染。垃圾分类是实现资源回收利用、保护生态环境的重要途径。然而，在实际推行过程中，居民常常面临不知如何分类、觉得分类麻烦的困境。</p>
+        <p data-i18n="bg_p2" style="margin-top: 1rem; font-size: 1.1rem; line-height: 1.8;">本项目旨在通过前沿的微控制器系统（MCU）与现场可编程逻辑门阵列（FPGA）技术，打造一款无需人工干预、全自动识别与分类的智能垃圾桶。它不仅能大幅降低分类门槛，提高资源回收率，还顺应了国家绿水青山就是金山银山的生态文明建设号召。用科技赋能环保，让每一次分类都成为对地球的温柔呵护。</p>
+    </section>
+
+    <footer>
+        <p data-i18n="footer_text">&copy; 2026 智能垃圾桶项目组. 保留所有权利.</p>
+    </footer>
+
+    <script>
+    const pageTranslations = {
+        zh: {
+            page_title: "智能垃圾桶 - 首页",
+            logo: "智能垃圾桶项目",
+            nav_home: "首页",
+            nav_project: "项目详情",
+            nav_about: "关于我",
+            hero_title: "开启智慧环保新生活",
+            hero_desc: "基于 MCU 与 FPGA 的智能垃圾桶设计，让分类更简单，让环境更美好。",
+            hero_btn: "了解更多",
+            feature1_title: "智能感应",
+            feature1_desc: "人体红外感应，自动开盖，无接触更卫生。搭载超声波雷达，靠近即刻响应。",
+            feature2_title: "自动分类",
+            feature2_desc: "图像识别与传感器结合，实现垃圾精准分类。FPGA 硬件边缘计算加速，秒级识别。",
+            feature3_title: "满载报警",
+            feature3_desc: "监测垃圾桶容量，满载自动提醒清理。支持接云端，让物业调度和环卫人员更省心。",
+            bg_title: "项目背景与环保意义",
+            bg_p1: "随着城市化进程的加快，生活垃圾产量激增，传统的垃圾处理方式不仅效率低下，且容易造成二次污染。垃圾分类是实现资源回收利用、保护生态环境的重要途径。然而，在实际推行过程中，居民常常面临不知如何分类、觉得分类麻烦的困境。",
+            bg_p2: "本项目旨在通过前沿的微控制器系统（MCU）与现场可编程逻辑门阵列（FPGA）技术，打造一款无需人工干预、全自动识别与分类的智能垃圾桶。它不仅能大幅降低分类门槛，提高资源回收率，还顺应了国家绿水青山就是金山银山的生态文明建设号召。用科技赋能环保，让每一次分类都成为对地球的温柔呵护。",
+            footer_text: "© 2026 智能垃圾桶项目组. 保留所有权利."
+        },
+        en: {
+            page_title: "Smart Trash Can - Home",
+            logo: "Smart Trash Can",
+            nav_home: "Home",
+            nav_project: "Project Details",
+            nav_about: "About Me",
+            hero_title: "Start a Smart & Eco-friendly Life",
+            hero_desc: "Smart trash can design based on MCU & FPGA. Making sorting easier and environment better.",
+            hero_btn: "Learn More",
+            feature1_title: "Smart Sensing",
+            feature1_desc: "Infrared sensing, auto-opening, contact-free and hygienic. Equipped with ultrasonic radar for instant response.",
+            feature2_title: "Auto Sorting",
+            feature2_desc: "Combined image recognition and sensors for precise garbage sorting. FPGA edge computing acceleration for millisecond-level recognition.",
+            feature3_title: "Full Alert",
+            feature3_desc: "Monitors capacity and automatically alerts when full. Supports cloud connectivity for easier management by environmental sanitation personnel.",
+            bg_title: "Project Background & Environmental Significance",
+            bg_p1: "With the acceleration of urbanization, domestic waste production has surged. Traditional waste disposal methods are not only inefficient but also prone to secondary pollution. Waste sorting is an essential way to achieve resource recycling and protect the eco-environment. However, in practice, residents often face the dilemma of 'not knowing how to sort' and 'finding it troublesome'.",
+            bg_p2: "This project aims to create a 'Smart Trash Can' with automatic recognition and sorting without manual intervention, utilizing cutting-edge MCU and FPGA technologies. It significantly lowers the sorting barrier, improves the recycling rate, and responds to the national call for ecological civilization. Using tech to empower environmental protection, making every sorting an act of care for the earth.",
+            footer_text: "© 2026 Smart Trash Can Project Team. All rights reserved."
+        }
+    };
+    </script>
+    <script src="lang.js"></script>
+</body>
+</html>

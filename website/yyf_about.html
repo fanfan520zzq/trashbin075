@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page_title">关于我</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo" data-i18n="logo">智能垃圾桶项目</div>
+        <ul class="nav-links">
+            <li><a href="yyf_index.html" data-i18n="nav_home">首页</a></li>
+            <li><a href="yyf_project.html" data-i18n="nav_project">项目详情</a></li>
+            <li><a href="yyf_about.html" class="active" data-i18n="nav_about">关于我</a></li>
+            <li><button id="lang-toggle" onclick="toggleLanguage()">English</button></li>
+        </ul>
+    </nav>
+
+    <main class="content-section profile-section animate-up">
+        <h1 data-i18n="about_title">关于开发者</h1>
+        <div class="profile-card">
+            <div class="avatar">
+                <span data-i18n="about_avatar">头像</span>
+            </div>
+            <div class="profile-info">
+                <h2 data-i18n="about_name">开发者：杨易帆</h2>
+                <p data-i18n="about_id" class="text-muted" style="font-weight: 500;">学号：24019100166</p>
+                <div class="divider" style="height: 2px; width: 50px; background: var(--primary-color); margin: 15px 0;"></div>
+                <p data-i18n="about_role">项目中负责：网站开发、文书工作、专利撰写。统筹了整体项目的宣传与文档沉淀，将复杂的硬件系统通过易懂的 Web 界面呈现给大众。</p>
+                <p data-i18n="about_email" class="email-badge" style="margin-top: 10px;">✉️ 邮箱：24019100166@stu.xidian.edu.cn</p>
+            </div>
+        </div>
+
+        <div class="card-outline animate-up delay-2" style="margin-top: 3rem;">
+            <h2 data-i18n="about_future_title" style="color: var(--primary-color);">展望与未来发展</h2>
+            <p data-i18n="about_future_p1" style="font-size: 1.05rem; line-height: 1.8;">智能垃圾桶只是我们迈向智慧城市以及物联网(IoT)边缘计算终端的一小步。在下一代版本的规划中，我们计划引入：</p>
+            <ul style="margin-top: 1rem;">
+                <li data-i18n="about_future_1">更强劲的 NPU 硬件加速器，支持本地运行微型深度学习模型，实现百余种垃圾精准分类。</li>
+                <li data-i18n="about_future_2">太阳能顶盖供电系统，追求极致低功耗，自给自足。</li>
+                <li data-i18n="about_future_3">结合大语言模型(LLM)的智能交互屏，能与投入垃圾的居民进行分类科普对话。</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p data-i18n="footer_text">&copy; 2026 智能垃圾桶项目组. 保留所有权利.</p>
+    </footer>
+
+    <script>
+    const pageTranslations = {
+        zh: {
+            page_title: "关于我",
+            logo: "智能垃圾桶项目",
+            nav_home: "首页",
+            nav_project: "项目详情",
+            nav_about: "关于我",
+            about_title: "关于开发者",
+            about_avatar: "头像",
+            about_name: "开发者：杨易帆",
+            about_id: "学号：24019100166",
+            about_role: "项目中负责：网站开发、文书工作、专利撰写。统筹了整体项目的宣传与文档沉淀，将复杂的硬件系统通过易懂的 Web 界面呈现给大众。",
+            about_email: "✉️ 邮箱：24019100166@stu.xidian.edu.cn",
+            about_future_title: "展望与未来发展",
+            about_future_p1: "智能垃圾桶只是我们迈向智慧城市以及物联网(IoT)边缘计算终端的一小步。在下一代版本的规划中，我们计划引入：",
+            about_future_1: "更强劲的 NPU 硬件加速器，支持本地运行微型深度学习模型，实现百余种垃圾精准分类。",
+            about_future_2: "太阳能顶盖供电系统，追求极致低功耗，自给自足。",
+            about_future_3: "结合大语言模型(LLM)的智能交互屏，能与投入垃圾的居民进行分类科普对话。",
+            footer_text: "© 2026 智能垃圾桶项目组. 保留所有权利."
+        },
+        en: {
+            page_title: "About Me",
+            logo: "Smart Trash Can",
+            nav_home: "Home",
+            nav_project: "Project Details",
+            nav_about: "About Me",
+            about_title: "About the Developer",
+            about_avatar: "Avatar",
+            about_name: "Developer: Yifan Yang",
+            about_id: "Student ID: 24019100166",
+            about_role: "Role: Website development, documentation, and patent drafting. Coordinated overall project publicity and documentation, presenting a complex hardware system to the public via an easy-to-understand Web interface.",
+            about_email: "✉️ Email: 24019100166@stu.xidian.edu.cn",
+            about_future_title: "Vision & Future Development",
+            about_future_p1: "The smart trash can is just a small step towards smart cities and IoT edge computing terminals. In our next generation roadmap, we plan to introduce:",
+            about_future_1: "A stronger NPU hardware accelerator, supporting local micro deep-learning models for over a hundred precise trash classifications.",
+            about_future_2: "Solar-powered roof system, pursuing extreme low power consumption for self-sufficiency.",
+            about_future_3: "A smart interactive screen integrated with Large Language Models (LLM) to conduct science-popularization conversations with residents.",
+            footer_text: "© 2026 Smart Trash Can Project Team. All rights reserved."
+        }
+    };
+    </script>
+    <script src="lang.js"></script>
+</body>
+</html>
