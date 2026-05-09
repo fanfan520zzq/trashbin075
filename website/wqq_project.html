@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page_title">系统技术白皮书</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-cyberpunk">
+    <nav>
+        <div class="logo" data-i18n="logo">智慧垃圾桶系统</div>
+        <ul class="nav-links">
+            <li><a href="wqq_index.html" data-i18n="nav_home">主页</a></li>
+            <li><a href="wqq_project.html" class="active" data-i18n="nav_project">技术方案</a></li>
+            <li><a href="wqq_about.html" data-i18n="nav_about">关于开发者</a></li>
+            <li><button id="lang-toggle" onclick="toggleLanguage()">English</button></li>
+        </ul>
+    </nav>
+
+    <main class="content-section animate-up">
+        <h1 data-i18n="proj_title">系统技术白皮书</h1>
+
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <img src="trashbin.png" alt="智能垃圾桶外观图" style="max-width: 100%; max-height: 400px; border-radius: 10px; margin-bottom: 1.5rem; box-shadow: 0 8px 25px rgba(0,0,0,0.15); transition: transform 0.3s;" class="hover-zoom">
+            <br>
+            <video src="video.mp4" controls style="max-width: 100%; border-radius: 10px; box-shadow: 0 8px 25px rgba(0,0,0,0.15);">
+                您的浏览器不支持视频播放。
+            </video>
+        </div>
+
+        <h2 data-i18n="proj_arch">总体架构设计</h2>
+        <p data-i18n="proj_arch_desc">系统采用异构计算架构：上层以 STM32F4 作为中央调度核心，运行 FreeRTOS 实时操作系统，统管人机交互、电机伺服与网络通信；底层 FPGA 作为视觉协处理单元，承担图像卷积、边缘提取等计算密集型任务。两者间通过高速 SPI 总线与 UART 双通道实现全双工数据流，兼顾吞吐量与实时性。</p>
+
+        <div style="text-align: center; margin: 2rem 0;">
+            <img src="structure.jpg" alt="系统结构框图" style="max-width: 100%; border-radius: 10px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); transition: transform 0.3s;" class="hover-zoom">
+        </div>
+
+        <div class="card-outline">
+            <h2 data-i18n="proj_work" style="margin-top: 0;">运行流程</h2>
+            <ul>
+                <li data-i18n="proj_work_1">1. 超声波及红外双模传感器持续扫描投放口区域，一旦捕获人体信号，MCU 立即驱动舵机翻盖。</li>
+                <li data-i18n="proj_work_2">2. 物品投入后，OV7670 图像模组采集多帧画面，经由 FPGA 内置流水线完成灰度化、二值化及轮廓提取。</li>
+                <li data-i18n="proj_work_3">3. 提取到的特征向量回传 MCU，经分类决策算法匹配后，控制步进电机偏转导流板，将废弃物导入对应收集仓。</li>
+                <li data-i18n="proj_work_4">4. 称重传感器与温湿度探头周期性采样，一旦触发满载阈值，蜂鸣器与 LED 矩阵同步告警，并通过 Wi-Fi 模块推送工单至管理端。</li>
+            </ul>
+        </div>
+
+        <div class="card-outline card-accent" style="margin-top: 2rem;">
+            <h2 data-i18n="proj_hardware_title" style="margin-top: 0;">核心硬件参数</h2>
+            <p data-i18n="proj_hardware_p1">器件选型以低功耗、高可靠为首要准则，兼顾 BOM 成本可控：</p>
+            <ul style="list-style-type: square;">
+                <li data-i18n="proj_hardware_1"><strong>主控单元：</strong> STM32F411CEU6（ARM Cortex-M4 @ 100MHz），搭载优化版 FreeRTOS，中断响应延迟 < 5μs。</li>
+                <li data-i18n="proj_hardware_2"><strong>视觉加速器：</strong> Intel MAX10 系列 FPGA，内嵌 12 路并行 MAC 单元，单帧处理时间 ≤ 8ms。</li>
+                <li data-i18n="proj_hardware_3"><strong>传感与执行组件：</strong> HC-SR04 超声测距模组、SG90 金属齿轮舵机、OV7670 CMOS 图像传感器、HX711 24位 ADC 称重前端。</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p data-i18n="footer_text">&copy; 2026 智慧垃圾桶研发团队. 保留所有权利.</p>
+    </footer>
+
+    <script>
+    const pageTranslations = {
+        zh: {
+            page_title: "系统技术白皮书",
+            logo: "智慧垃圾桶系统",
+            nav_home: "主页",
+            nav_project: "技术方案",
+            nav_about: "关于开发者",
+            proj_title: "系统技术白皮书",
+            proj_arch: "总体架构设计",
+            proj_arch_desc: "系统采用异构计算架构：上层以 STM32F4 作为中央调度核心，运行 FreeRTOS 实时操作系统，统管人机交互、电机伺服与网络通信；底层 FPGA 作为视觉协处理单元，承担图像卷积、边缘提取等计算密集型任务。两者间通过高速 SPI 总线与 UART 双通道实现全双工数据流，兼顾吞吐量与实时性。",
+            proj_work: "运行流程",
+            proj_work_1: "1. 超声波及红外双模传感器持续扫描投放口区域，一旦捕获人体信号，MCU 立即驱动舵机翻盖。",
+            proj_work_2: "2. 物品投入后，OV7670 图像模组采集多帧画面，经由 FPGA 内置流水线完成灰度化、二值化及轮廓提取。",
+            proj_work_3: "3. 提取到的特征向量回传 MCU，经分类决策算法匹配后，控制步进电机偏转导流板，将废弃物导入对应收集仓。",
+            proj_work_4: "4. 称重传感器与温湿度探头周期性采样，一旦触发满载阈值，蜂鸣器与 LED 矩阵同步告警，并通过 Wi-Fi 模块推送工单至管理端。",
+            proj_hardware_title: "核心硬件参数",
+            proj_hardware_p1: "器件选型以低功耗、高可靠为首要准则，兼顾 BOM 成本可控：",
+            proj_hardware_1: "主控单元： STM32F411CEU6（ARM Cortex-M4 @ 100MHz），搭载优化版 FreeRTOS，中断响应延迟 < 5μs。",
+            proj_hardware_2: "视觉加速器： Intel MAX10 系列 FPGA，内嵌 12 路并行 MAC 单元，单帧处理时间 ≤ 8ms。",
+            proj_hardware_3: "传感与执行组件： HC-SR04 超声测距模组、SG90 金属齿轮舵机、OV7670 CMOS 图像传感器、HX711 24位 ADC 称重前端。",
+            footer_text: "© 2026 智慧垃圾桶研发团队. 保留所有权利."
+        },
+        en: {
+            page_title: "System Whitepaper",
+            logo: "Smart Waste System",
+            nav_home: "Main",
+            nav_project: "Tech Specs",
+            nav_about: "Developer",
+            proj_title: "System Whitepaper",
+            proj_arch: "Architecture Overview",
+            proj_arch_desc: "The system employs a heterogeneous computing architecture: an STM32F4 serves as the central scheduling core running FreeRTOS, managing HMI, servo control, and network communication; a low-power FPGA acts as the vision co-processor, handling convolution, edge extraction, and other compute-intensive workloads. A high-speed SPI bus coupled with dual UART channels enables full-duplex data flow, balancing throughput and real-time responsiveness.",
+            proj_work: "Operational Flow",
+            proj_work_1: "1. Dual-mode ultrasonic and IR sensors continuously scan the deposit zone. Upon human detection, the MCU triggers the servo to flip the lid.",
+            proj_work_2: "2. Once an item is deposited, the OV7670 imager captures multiple frames. The FPGA pipeline performs grayscale conversion, binarization, and contour extraction.",
+            proj_work_3: "3. Extracted feature vectors are sent back to the MCU, where a classification decision algorithm matches the item and actuates a stepper motor to divert it into the appropriate bin.",
+            proj_work_4: "4. Weight and temperature/humidity sensors sample periodically. When the full-capacity threshold is reached, a buzzer and LED matrix alert locally while a Wi-Fi module pushes a work order to the management dashboard.",
+            proj_hardware_title: "Core Hardware Parameters",
+            proj_hardware_p1: "Component selection prioritizes low power and high reliability while maintaining BOM cost control:",
+            proj_hardware_1: "Main Controller: STM32F411CEU6 (ARM Cortex-M4 @ 100MHz) with optimized FreeRTOS; interrupt latency < 5μs.",
+            proj_hardware_2: "Vision Accelerator: Intel MAX10 FPGA with 12 parallel MAC units; single-frame processing ≤ 8ms.",
+            proj_hardware_3: "Sensor & Actuator Suite: HC-SR04 ultrasonic rangefinder, SG90 metal-gear servo, OV7670 CMOS imager, HX711 24-bit ADC weighing front-end.",
+            footer_text: "© 2026 Smart Waste System R&D Team. All rights reserved."
+        }
+    };
+    </script>
+    <script src="lang.js"></script>
+</body>
+</html>

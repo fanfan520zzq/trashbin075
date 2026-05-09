@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page_title">智慧垃圾桶系统 - 主页</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-cyberpunk">
+    <nav>
+        <div class="logo" data-i18n="logo">智慧垃圾桶系统</div>
+        <ul class="nav-links">
+            <li><a href="wqq_index.html" class="active" data-i18n="nav_home">主页</a></li>
+            <li><a href="wqq_project.html" data-i18n="nav_project">技术方案</a></li>
+            <li><a href="wqq_about.html" data-i18n="nav_about">关于开发者</a></li>
+            <li><button id="lang-toggle" onclick="toggleLanguage()">English</button></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content animate-up">
+            <h1 data-i18n="hero_title">拥抱未来科技，重塑城市清洁</h1>
+            <p data-i18n="hero_desc">融合微控制器与可编程逻辑器件的下一代废弃物自动分拣终端，用硬核技术为地球减负。</p>
+            <a href="wqq_project.html" class="cta-btn" data-i18n="hero_btn">探索技术</a>
+        </div>
+    </header>
+
+    <section class="features">
+        <div class="feature-card animate-up delay-1">
+            <div class="feature-icon">✨</div>
+            <h3 data-i18n="feature1_title">无感交互</h3>
+            <p data-i18n="feature1_desc">热释电红外配合超声阵列，感知即开盖，全程零接触。让每一次丢弃都干净利落。</p>
+        </div>
+        <div class="feature-card animate-up delay-2">
+            <div class="feature-icon">🔍</div>
+            <h3 data-i18n="feature2_title">AI 分类引擎</h3>
+            <p data-i18n="feature2_desc">FPGA 硬件流水线并行推理，图像特征提取在毫秒间完成，垃圾类别一目了然。</p>
+        </div>
+        <div class="feature-card animate-up delay-3">
+            <div class="feature-icon">🔔</div>
+            <h3 data-i18n="feature3_title">云端物联</h3>
+            <p data-i18n="feature3_desc">实时监测桶位饱和度，数据同步上传管理平台。清运调度从此有据可依。</p>
+        </div>
+    </section>
+
+    <section class="content-section bg-section animate-up" style="margin: 0; padding: 4rem 10%;">
+        <h2 data-i18n="bg_title" style="text-align: center; color: var(--primary-color);">立项背景与生态价值</h2>
+        <p data-i18n="bg_p1" style="margin-top: 2rem; font-size: 1.1rem; line-height: 1.8;">城镇人口密度持续攀升，固废处置面临严峻挑战。粗放式填埋与焚烧不仅侵占土地资源，更带来不可逆的环境损害。推行精细化分类是破解垃圾围城困局的关键钥匙，但居民端的认知门槛与执行成本始终是落地的最大阻力。</p>
+        <p data-i18n="bg_p2" style="margin-top: 1rem; font-size: 1.1rem; line-height: 1.8;">本课题立足嵌入式系统前沿，融合 ARM Cortex-M 实时控制与 FPGA 硬件加速两大技术路线，构建一套从感知、识别到分拣的全自动闭环。它追求的不仅是功能层面的智能化，更是对科技向善理念的技术回应——让环保融入日常，而非增添负担。</p>
+    </section>
+
+    <footer>
+        <p data-i18n="footer_text">&copy; 2026 智慧垃圾桶研发团队. 保留所有权利.</p>
+    </footer>
+
+    <script>
+    const pageTranslations = {
+        zh: {
+            page_title: "智慧垃圾桶系统 - 主页",
+            logo: "智慧垃圾桶系统",
+            nav_home: "主页",
+            nav_project: "技术方案",
+            nav_about: "关于开发者",
+            hero_title: "拥抱未来科技，重塑城市清洁",
+            hero_desc: "融合微控制器与可编程逻辑器件的下一代废弃物自动分拣终端，用硬核技术为地球减负。",
+            hero_btn: "探索技术",
+            feature1_title: "无感交互",
+            feature1_desc: "热释电红外配合超声阵列，感知即开盖，全程零接触。让每一次丢弃都干净利落。",
+            feature2_title: "AI 分类引擎",
+            feature2_desc: "FPGA 硬件流水线并行推理，图像特征提取在毫秒间完成，垃圾类别一目了然。",
+            feature3_title: "云端物联",
+            feature3_desc: "实时监测桶位饱和度，数据同步上传管理平台。清运调度从此有据可依。",
+            bg_title: "立项背景与生态价值",
+            bg_p1: "城镇人口密度持续攀升，固废处置面临严峻挑战。粗放式填埋与焚烧不仅侵占土地资源，更带来不可逆的环境损害。推行精细化分类是破解垃圾围城困局的关键钥匙，但居民端的认知门槛与执行成本始终是落地的最大阻力。",
+            bg_p2: "本课题立足嵌入式系统前沿，融合 ARM Cortex-M 实时控制与 FPGA 硬件加速两大技术路线，构建一套从感知、识别到分拣的全自动闭环。它追求的不仅是功能层面的智能化，更是对科技向善理念的技术回应——让环保融入日常，而非增添负担。",
+            footer_text: "© 2026 智慧垃圾桶研发团队. 保留所有权利."
+        },
+        en: {
+            page_title: "Smart Waste System - Main",
+            logo: "Smart Waste System",
+            nav_home: "Main",
+            nav_project: "Tech Specs",
+            nav_about: "Developer",
+            hero_title: "Embrace Future Tech, Redefine Urban Cleanliness",
+            hero_desc: "A next-gen autonomous waste sorting terminal powered by MCU and FPGA co-processing. Hard technology for a lighter planet.",
+            hero_btn: "Explore Tech",
+            feature1_title: "Touchless Interaction",
+            feature1_desc: "Pyroelectric IR paired with ultrasonic array detects presence and opens the lid instantly. A seamless, zero-contact experience.",
+            feature2_title: "AI Sorting Engine",
+            feature2_desc: "FPGA hardware pipeline performs parallel inference, extracting image features in milliseconds for instant classification.",
+            feature3_title: "Cloud Telemetry",
+            feature3_desc: "Real-time bin capacity monitoring with data synced to the management platform. Data-driven dispatch for sanitation crews.",
+            bg_title: "Background & Ecological Impact",
+            bg_p1: "As urban density continues to surge, solid waste disposal faces mounting challenges. Crude landfilling and incineration not only consume land but cause irreversible ecological damage. Precision sorting is the key to breaking the 'waste siege', yet the cognitive friction and effort cost for residents remain the biggest obstacle to adoption.",
+            bg_p2: "This project sits at the intersection of embedded systems and edge AI, combining ARM Cortex-M real-time control with FPGA hardware acceleration to build a fully autonomous closed loop from sensing to sorting. It is more than a smart gadget — it is a technological response to the principle of 'tech for good', embedding sustainability into daily routine rather than adding to it.",
+            footer_text: "© 2026 Smart Waste System R&D Team. All rights reserved."
+        }
+    };
+    </script>
+    <script src="lang.js"></script>
+</body>
+</html>
