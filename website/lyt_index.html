@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page_title">智能分拣工作站 - 首页</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-warm">
+    <nav>
+        <div class="logo" data-i18n="logo">智能分拣工作站</div>
+        <ul class="nav-links">
+            <li><a href="lyt_index.html" class="active" data-i18n="nav_home">首页</a></li>
+            <li><a href="lyt_project.html" data-i18n="nav_project">技术文档</a></li>
+            <li><a href="lyt_about.html" data-i18n="nav_about">关于我们</a></li>
+            <li><button id="lang-toggle" onclick="toggleLanguage()">English</button></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content animate-up">
+            <h1 data-i18n="hero_title">科技赋能环保，分拣智创未来</h1>
+            <p data-i18n="hero_desc">以 MCU 与 FPGA 异构计算为核心的新一代智能分类终端，让城市固废处理迈入自动化时代。</p>
+            <a href="lyt_project.html" class="cta-btn" data-i18n="hero_btn">探索详情</a>
+        </div>
+    </header>
+
+    <section class="features">
+        <div class="feature-card animate-up delay-1">
+            <div class="feature-icon">✨</div>
+            <h3 data-i18n="feature1_title">多源融合感知</h3>
+            <p data-i18n="feature1_desc">超声波与红外传感器协同工作，人体靠近自动响应，全程零接触开盖体验。</p>
+        </div>
+        <div class="feature-card animate-up delay-2">
+            <div class="feature-icon">🔍</div>
+            <h3 data-i18n="feature2_title">边缘视觉识别</h3>
+            <p data-i18n="feature2_desc">基于 FPGA 的硬件加速架构，在设备端完成图像采集与分类推理，毫秒级输出判别结果。</p>
+        </div>
+        <div class="feature-card animate-up delay-3">
+            <div class="feature-icon">🔔</div>
+            <h3 data-i18n="feature3_title">智慧云管理</h3>
+            <p data-i18n="feature3_desc">内置物联网通信模组，桶满状态实时上报云端平台，环卫调度精准高效。</p>
+        </div>
+    </section>
+
+    <section class="content-section bg-section animate-up" style="margin: 0; padding: 4rem 10%;">
+        <h2 data-i18n="bg_title" style="text-align: center; color: var(--primary-color);">项目背景与生态价值</h2>
+        <p data-i18n="bg_p1" style="margin-top: 2rem; font-size: 1.1rem; line-height: 1.8;">城镇化进程不断加速，城市生活垃圾总量持续攀升。传统填埋与焚烧方式已难以满足日益严格的环保要求，资源浪费与二次污染问题日益凸显。精细化分类是资源回收再利用的关键前提，但公众普遍面临分类标准复杂、执行不便的现实困境。</p>
+        <p data-i18n="bg_p2" style="margin-top: 1rem; font-size: 1.1rem; line-height: 1.8;">本项目立足于嵌入式异构计算技术，充分发挥 MCU 的实时控制能力与 FPGA 的硬件并行优势，打造一套从感应、识别到分拣的全流程自动化系统。旨在以技术手段降低垃圾分类的参与门槛，提高资源回收效率，为推动绿色低碳发展贡献一份力量。</p>
+    </section>
+
+    <footer>
+        <p data-i18n="footer_text">&copy; 2026 智能分拣工作站项目组. 保留所有权利.</p>
+    </footer>
+
+    <script>
+    const pageTranslations = {
+        zh: {
+            page_title: "智能分拣工作站 - 首页",
+            logo: "智能分拣工作站",
+            nav_home: "首页",
+            nav_project: "技术文档",
+            nav_about: "关于我们",
+            hero_title: "科技赋能环保，分拣智创未来",
+            hero_desc: "以 MCU 与 FPGA 异构计算为核心的新一代智能分类终端，让城市固废处理迈入自动化时代。",
+            hero_btn: "探索详情",
+            feature1_title: "多源融合感知",
+            feature1_desc: "超声波与红外传感器协同工作，人体靠近自动响应，全程零接触开盖体验。",
+            feature2_title: "边缘视觉识别",
+            feature2_desc: "基于 FPGA 的硬件加速架构，在设备端完成图像采集与分类推理，毫秒级输出判别结果。",
+            feature3_title: "智慧云管理",
+            feature3_desc: "内置物联网通信模组，桶满状态实时上报云端平台，环卫调度精准高效。",
+            bg_title: "项目背景与生态价值",
+            bg_p1: "城镇化进程不断加速，城市生活垃圾总量持续攀升。传统填埋与焚烧方式已难以满足日益严格的环保要求，资源浪费与二次污染问题日益凸显。精细化分类是资源回收再利用的关键前提，但公众普遍面临分类标准复杂、执行不便的现实困境。",
+            bg_p2: "本项目立足于嵌入式异构计算技术，充分发挥 MCU 的实时控制能力与 FPGA 的硬件并行优势，打造一套从感应、识别到分拣的全流程自动化系统。旨在以技术手段降低垃圾分类的参与门槛，提高资源回收效率，为推动绿色低碳发展贡献一份力量。",
+            footer_text: "© 2026 智能分拣工作站项目组. 保留所有权利."
+        },
+        en: {
+            page_title: "Smart Sorting Station - Home",
+            logo: "Smart Sorting Station",
+            nav_home: "Home",
+            nav_project: "Documentation",
+            nav_about: "About Us",
+            hero_title: "Tech Empowers Ecology, Smart Sorting Leads the Future",
+            hero_desc: "A next-gen intelligent sorting terminal powered by MCU-FPGA heterogeneous computing, bringing urban waste management into the age of automation.",
+            hero_btn: "View Details",
+            feature1_title: "Multi-Sensor Fusion",
+            feature1_desc: "Collaborative ultrasonic and IR sensors detect human approach, enabling zero-contact, automatic lid opening.",
+            feature2_title: "Edge Vision Intelligence",
+            feature2_desc: "FPGA-accelerated hardware architecture performs image capture and classification inference on-device, delivering millisecond-level results.",
+            feature3_title: "Smart Cloud Management",
+            feature3_desc: "Built-in IoT module reports real-time bin status to the cloud platform, enabling precise sanitation dispatch.",
+            bg_title: "Project Background & Environmental Value",
+            bg_p1: "Rapid urbanization has led to a surge in solid waste generation. Conventional disposal methods are inefficient and risk secondary pollution. Precise waste sorting is essential for resource recovery, yet public participation remains low due to complexity and inconvenience.",
+            bg_p2: "This project leverages cutting-edge MCU and FPGA technologies to create an automated sorting system requiring no manual intervention. By lowering the barrier to participation, it aims to improve recycling rates and contribute to a sustainable urban ecosystem.",
+            footer_text: "© 2026 Smart Sorting Station Project Team. All rights reserved."
+        }
+    };
+    </script>
+    <script src="lang.js"></script>
+</body>
+</html>
