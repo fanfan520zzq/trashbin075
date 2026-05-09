@@ -547,3 +547,151 @@ body.theme-cyberpunk .email-badge {
     color: var(--secondary-color);
     border: 1px solid rgba(0, 229, 255, 0.2);
 }
+
+/* ========== 暖阳琥珀主题 (LYT) ========== */
+body.theme-warm {
+    --primary-color: #bf360c;
+    --secondary-color: #ff8f00;
+    --text-color: #3e2723;
+    --bg-color: #fef8f0;
+    font-family: 'Georgia', 'Noto Serif SC', 'Times New Roman', serif;
+    background-color: #fef8f0;
+    color: #3e2723;
+}
+
+body.theme-warm nav {
+    background-color: rgba(255, 248, 240, 0.97);
+    border-bottom: 1px solid rgba(191, 54, 12, 0.2);
+    box-shadow: 0 4px 20px rgba(191, 54, 12, 0.08);
+}
+
+body.theme-warm .logo {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+body.theme-warm .nav-links a::after {
+    background-color: var(--secondary-color);
+}
+
+body.theme-warm .nav-links a:hover,
+body.theme-warm .nav-links a.active {
+    color: var(--primary-color);
+}
+
+body.theme-warm #lang-toggle {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+body.theme-warm #lang-toggle:hover {
+    background: var(--primary-color);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(191, 54, 12, 0.3);
+}
+
+body.theme-warm .hero {
+    background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+}
+
+body.theme-warm .hero-bg {
+    background: radial-gradient(circle, rgba(255, 143, 0, 0.15) 10%, transparent 10%),
+                radial-gradient(circle, rgba(191, 54, 12, 0.08) 10%, transparent 10%);
+    background-size: 35px 35px;
+    background-position: 0 0, 17px 17px;
+}
+
+body.theme-warm .hero h1 {
+    color: var(--primary-color);
+    text-shadow: 0 2px 8px rgba(191, 54, 12, 0.15);
+}
+
+body.theme-warm .hero p {
+    color: #5d4037;
+}
+
+body.theme-warm .cta-btn {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(191, 54, 12, 0.35);
+}
+
+body.theme-warm .cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(191, 54, 12, 0.5);
+}
+
+body.theme-warm .features {
+    background: #fef8f0;
+}
+
+body.theme-warm .feature-card {
+    background: #fffaf5;
+    border-bottom: 4px solid transparent;
+}
+
+body.theme-warm .feature-card:hover {
+    border-bottom: 4px solid var(--secondary-color);
+    box-shadow: 0 15px 40px rgba(191, 54, 12, 0.1);
+}
+
+body.theme-warm .feature-card h3 {
+    color: var(--primary-color);
+}
+
+body.theme-warm .feature-card p {
+    color: #6d4c41;
+}
+
+body.theme-warm .content-section h1,
+body.theme-warm .content-section h2 {
+    color: var(--primary-color);
+}
+
+body.theme-warm .card-outline {
+    background: #fffaf5;
+    border: 1px solid rgba(255, 143, 0, 0.12);
+}
+
+body.theme-warm .profile-card {
+    background: #fffaf5;
+    border: 1px solid rgba(255, 143, 0, 0.12);
+}
+
+body.theme-warm .avatar {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    box-shadow: 0 4px 20px rgba(191, 54, 12, 0.25);
+}
+
+body.theme-warm .divider {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+}
+
+body.theme-warm footer {
+    background-color: #3e2723;
+    color: #efebe9;
+}
+
+body.theme-warm .bg-section {
+    background-color: #fff3e0;
+}
+
+body.theme-warm .card-accent {
+    background: linear-gradient(to right, #fffaf5, #fff3e0);
+}
+
+body.theme-warm .text-muted {
+    color: #8d6e63;
+}
+
+body.theme-warm .email-badge {
+    background: #fff3e0;
+    color: var(--primary-color);
+    border: 1px solid rgba(191, 54, 12, 0.15);
+}
+
+body.theme-warm .hover-zoom:hover {
+    box-shadow: 0 0 25px rgba(191, 54, 12, 0.2);
+}

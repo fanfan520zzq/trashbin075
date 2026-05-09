@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page_title">系统技术文档</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-warm">
+    <nav>
+        <div class="logo" data-i18n="logo">智能分拣工作站</div>
+        <ul class="nav-links">
+            <li><a href="lyt_index.html" data-i18n="nav_home">首页</a></li>
+            <li><a href="lyt_project.html" class="active" data-i18n="nav_project">技术文档</a></li>
+            <li><a href="lyt_about.html" data-i18n="nav_about">关于我们</a></li>
+            <li><button id="lang-toggle" onclick="toggleLanguage()">English</button></li>
+        </ul>
+    </nav>
+
+    <main class="content-section animate-up">
+        <h1 data-i18n="proj_title">系统技术文档</h1>
+
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <img src="trashbin.png" alt="智能垃圾桶外观图" style="max-width: 100%; max-height: 400px; border-radius: 10px; margin-bottom: 1.5rem; box-shadow: 0 8px 25px rgba(0,0,0,0.15); transition: transform 0.3s;" class="hover-zoom">
+            <br>
+            <video src="video.mp4" controls style="max-width: 100%; border-radius: 10px; box-shadow: 0 8px 25px rgba(0,0,0,0.15);">
+                您的浏览器不支持视频播放。
+            </video>
+        </div>
+
+        <h2 data-i18n="proj_arch">总体架构</h2>
+        <p data-i18n="proj_arch_desc">本系统基于 STM32F4 系列微控制器与 Intel MAX10 FPGA 构建异构协同计算平台。MCU 承担上层控制逻辑、电机驱动与网络通讯，FPGA 专注于图像采集、预处理与加速推理。双芯通过高速 SPI 总线互联，实现低延迟、高吞吐的数据交换。</p>
+
+        <div style="text-align: center; margin: 2rem 0;">
+            <img src="structure.jpg" alt="系统结构框图" style="max-width: 100%; border-radius: 10px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); transition: transform 0.3s;" class="hover-zoom">
+        </div>
+
+        <div class="card-outline">
+            <h2 data-i18n="proj_work" style="margin-top: 0;">工作流程</h2>
+            <ul>
+                <li data-i18n="proj_work_1">1. 传感器阵列实时监测投放口，检测到人体接近信号后，MCU 控制舵机自动开盖。</li>
+                <li data-i18n="proj_work_2">2. 投放物品后，高清摄像头采集目标图像，FPGA 立即执行灰度化与边缘提取预处理。</li>
+                <li data-i18n="proj_work_3">3. 处理后的特征数据由分类算法判定类型，MCU 驱动对应机构的挡板完成分拣。</li>
+                <li data-i18n="proj_work_4">4. 称重传感器与环境传感器持续采样，达到满载线后自动报警并上报云平台。</li>
+            </ul>
+        </div>
+
+        <div class="card-outline card-accent" style="margin-top: 2rem;">
+            <h2 data-i18n="proj_hardware_title" style="margin-top: 0;">硬件配置清单</h2>
+            <p data-i18n="proj_hardware_p1">关键器件选型综合考虑了功耗、性能与成本三要素：</p>
+            <ul style="list-style-type: square;">
+                <li data-i18n="proj_hardware_1"><strong>主控制器：</strong> STM32F411CEU6，Cortex-M4 内核 @ 100MHz，配合 FreeRTOS 实现微秒级响应。</li>
+                <li data-i18n="proj_hardware_2"><strong>加速单元：</strong> Intel MAX10 FPGA，内置 12 路 MAC 并行流水线，单帧图像处理 < 8ms。</li>
+                <li data-i18n="proj_hardware_3"><strong>传感与执行器：</strong> HC-SR04 超声波传感器、SG90 标准舵机、OV7670 摄像头模组、HX711 称重模块。</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p data-i18n="footer_text">&copy; 2026 智能分拣工作站项目组. 保留所有权利.</p>
+    </footer>
+
+    <script>
+    const pageTranslations = {
+        zh: {
+            page_title: "系统技术文档",
+            logo: "智能分拣工作站",
+            nav_home: "首页",
+            nav_project: "技术文档",
+            nav_about: "关于我们",
+            proj_title: "系统技术文档",
+            proj_arch: "总体架构",
+            proj_arch_desc: "本系统基于 STM32F4 系列微控制器与 Intel MAX10 FPGA 构建异构协同计算平台。MCU 承担上层控制逻辑、电机驱动与网络通讯，FPGA 专注于图像采集、预处理与加速推理。双芯通过高速 SPI 总线互联，实现低延迟、高吞吐的数据交换。",
+            proj_work: "工作流程",
+            proj_work_1: "1. 传感器阵列实时监测投放口，检测到人体接近信号后，MCU 控制舵机自动开盖。",
+            proj_work_2: "2. 投放物品后，高清摄像头采集目标图像，FPGA 立即执行灰度化与边缘提取预处理。",
+            proj_work_3: "3. 处理后的特征数据由分类算法判定类型，MCU 驱动对应机构的挡板完成分拣。",
+            proj_work_4: "4. 称重传感器与环境传感器持续采样，达到满载线后自动报警并上报云平台。",
+            proj_hardware_title: "硬件配置清单",
+            proj_hardware_p1: "关键器件选型综合考虑了功耗、性能与成本三要素：",
+            proj_hardware_1: "主控制器： STM32F411CEU6，Cortex-M4 内核 @ 100MHz，配合 FreeRTOS 实现微秒级响应。",
+            proj_hardware_2: "加速单元： Intel MAX10 FPGA，内置 12 路 MAC 并行流水线，单帧图像处理 < 8ms。",
+            proj_hardware_3: "传感与执行器： HC-SR04 超声波传感器、SG90 标准舵机、OV7670 摄像头模组、HX711 称重模块。",
+            footer_text: "© 2026 智能分拣工作站项目组. 保留所有权利."
+        },
+        en: {
+            page_title: "Technical Documentation",
+            logo: "Smart Sorting Station",
+            nav_home: "Home",
+            nav_project: "Documentation",
+            nav_about: "About Us",
+            proj_title: "System Technical Documentation",
+            proj_arch: "System Architecture",
+            proj_arch_desc: "The system is built around an STM32F4 microcontroller and an Intel MAX10 FPGA forming a heterogeneous computing platform. The MCU handles control logic, motor actuation, and network communication, while the FPGA focuses on image acquisition, preprocessing, and accelerated inference. The two cores communicate via a high-speed SPI bus for low-latency, high-throughput data exchange.",
+            proj_work: "Workflow",
+            proj_work_1: "1. Sensor array continuously monitors the deposit area. Upon detecting human approach, the MCU triggers the servo to open the lid.",
+            proj_work_2: "2. After an item is deposited, the HD camera captures the target image, and the FPGA immediately performs grayscale conversion and edge extraction.",
+            proj_work_3: "3. The processed feature data is classified by the decision algorithm, and the MCU drives the corresponding baffle mechanism to complete sorting.",
+            proj_work_4: "4. Weight and environmental sensors sample continuously. When the full line is reached, the system automatically alarms and reports to the cloud platform.",
+            proj_hardware_title: "Hardware Configuration",
+            proj_hardware_p1: "Key component selection balances power consumption, performance, and cost:",
+            proj_hardware_1: "Main Controller: STM32F411CEU6, Cortex-M4 @ 100MHz with FreeRTOS for microsecond-level response.",
+            proj_hardware_2: "Acceleration Unit: Intel MAX10 FPGA with 12 parallel MAC pipelines, single-frame image processing < 8ms.",
+            proj_hardware_3: "Sensor & Actuator Set: HC-SR04 ultrasonic sensor, SG90 servo, OV7670 camera module, HX711 weighing module.",
+            footer_text: "© 2026 Smart Sorting Station Project Team. All rights reserved."
+        }
+    };
+    </script>
+    <script src="lang.js"></script>
+</body>
+</html>

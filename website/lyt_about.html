@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page_title">关于项目组</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-warm">
+    <nav>
+        <div class="logo" data-i18n="logo">智能分拣工作站</div>
+        <ul class="nav-links">
+            <li><a href="lyt_index.html" data-i18n="nav_home">首页</a></li>
+            <li><a href="lyt_project.html" data-i18n="nav_project">技术文档</a></li>
+            <li><a href="lyt_about.html" class="active" data-i18n="nav_about">关于我们</a></li>
+            <li><button id="lang-toggle" onclick="toggleLanguage()">English</button></li>
+        </ul>
+    </nav>
+
+    <main class="content-section profile-section animate-up">
+        <h1 data-i18n="about_title">项目团队</h1>
+        <div class="profile-card">
+            <div class="avatar">
+                <span data-i18n="about_avatar">头像</span>
+            </div>
+            <div class="profile-info">
+                <h2 data-i18n="about_name">项目成员：杨易帆</h2>
+                <p data-i18n="about_id" class="text-muted" style="font-weight: 500;">学号：24019100166</p>
+                <div class="divider" style="height: 2px; width: 50px; background: var(--primary-color); margin: 15px 0;"></div>
+                <p data-i18n="about_role">负责系统架构设计、Web 前端开发与项目文档编写。致力于用直观的界面呈现复杂的硬件系统，降低技术理解门槛。</p>
+                <p data-i18n="about_email" class="email-badge" style="margin-top: 10px;">✉️ 邮箱：24019100166@stu.xidian.edu.cn</p>
+            </div>
+        </div>
+
+        <div class="card-outline animate-up delay-2" style="margin-top: 3rem;">
+            <h2 data-i18n="about_future_title" style="color: var(--primary-color);">未来规划</h2>
+            <p data-i18n="about_future_p1" style="font-size: 1.05rem; line-height: 1.8;">当前方案已验证异构嵌入式平台在垃圾分类领域的可行性与优势。后续将从以下方向持续优化：</p>
+            <ul style="margin-top: 1rem;">
+                <li data-i18n="about_future_1">端侧 AI 升级：部署专用 NPU 协处理器，支持更大规模的本地分类模型，拓展可识别物品种类。</li>
+                <li data-i18n="about_future_2">绿色能源方案：集成光伏供电系统与低功耗电源管理芯片，实现户外场景下的能源自给。</li>
+                <li data-i18n="about_future_3">智能交互体验：接入对话式 AI 助手，提供垃圾分类知识的实时问答与科普服务。</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p data-i18n="footer_text">&copy; 2026 智能分拣工作站项目组. 保留所有权利.</p>
+    </footer>
+
+    <script>
+    const pageTranslations = {
+        zh: {
+            page_title: "关于项目组",
+            logo: "智能分拣工作站",
+            nav_home: "首页",
+            nav_project: "技术文档",
+            nav_about: "关于我们",
+            about_title: "项目团队",
+            about_avatar: "头像",
+            about_name: "项目成员：杨易帆",
+            about_id: "学号：24019100166",
+            about_role: "负责系统架构设计、Web 前端开发与项目文档编写。致力于用直观的界面呈现复杂的硬件系统，降低技术理解门槛。",
+            about_email: "✉️ 邮箱：24019100166@stu.xidian.edu.cn",
+            about_future_title: "未来规划",
+            about_future_p1: "当前方案已验证异构嵌入式平台在垃圾分类领域的可行性与优势。后续将从以下方向持续优化：",
+            about_future_1: "端侧 AI 升级：部署专用 NPU 协处理器，支持更大规模的本地分类模型，拓展可识别物品种类。",
+            about_future_2: "绿色能源方案：集成光伏供电系统与低功耗电源管理芯片，实现户外场景下的能源自给。",
+            about_future_3: "智能交互体验：接入对话式 AI 助手，提供垃圾分类知识的实时问答与科普服务。",
+            footer_text: "© 2026 智能分拣工作站项目组. 保留所有权利."
+        },
+        en: {
+            page_title: "About the Team",
+            logo: "Smart Sorting Station",
+            nav_home: "Home",
+            nav_project: "Documentation",
+            nav_about: "About Us",
+            about_title: "The Team",
+            about_avatar: "Avatar",
+            about_name: "Team Member: Yifan Yang",
+            about_id: "Student ID: 24019100166",
+            about_role: "Responsibilities: System architecture design, web frontend development, and project documentation. Dedicated to presenting complex hardware systems through intuitive interfaces.",
+            about_email: "✉️ Email: 24019100166@stu.xidian.edu.cn",
+            about_future_title: "Future Plans",
+            about_future_p1: "The current solution validates the feasibility of heterogeneous embedded platforms in the waste sorting domain. The following directions will be pursued for continuous improvement:",
+            about_future_1: "Edge AI Upgrade: Deploy dedicated NPU co-processors to support larger-scale local classification models, expanding the range of recognizable items.",
+            about_future_2: "Green Energy: Integrate photovoltaic power supply with low-power management IC for self-sustained outdoor operation.",
+            about_future_3: "Interactive Experience: Incorporate a conversational AI assistant for real-time Q&A and educational outreach on waste sorting.",
+            footer_text: "© 2026 Smart Sorting Station Project Team. All rights reserved."
+        }
+    };
+    </script>
+    <script src="lang.js"></script>
+</body>
+</html>
